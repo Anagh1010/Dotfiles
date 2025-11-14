@@ -1,0 +1,12 @@
+font-family = CaskaydiaCove Nerd Font
+font-size = 19
+font-feature = liga
+# font-thicken = true
+window-width = 126
+window-height = 36
+theme = catppuccin-macchiato.conf
+cursor-style = bar
+cursor-style-blink = true
+shell-integration-features = no-cursor
+mouse-scroll-multiplier = 6
+background-opacity = 0.95
