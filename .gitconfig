@@ -4,5 +4,3 @@
 [core]
 	editor = nano
 	autocrlf = input
-[credential]
-	helper = 
