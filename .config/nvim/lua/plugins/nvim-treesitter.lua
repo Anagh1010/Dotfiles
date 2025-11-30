@@ -15,7 +15,8 @@ return {
             "cpp",
             "python",
             "javascript",
-            "html"
+            "html",
+            "markdown"
         }
         require('nvim-treesitter').install(ensure_installed)
     end
