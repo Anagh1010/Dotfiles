@@ -2,5 +2,7 @@
 	name = Anagh Bajpai
 	email = anaghb1010@gmail.com
 [core]
-	editor = nano
+	editor = nvim
 	autocrlf = input
+[credential]
+	helper = 
