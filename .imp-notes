@@ -7,3 +7,5 @@ brew cleanup --prune=all --> cleanup all files instead of just files older than 
 run gemini-cli by running 'gemini' in the terminal. In a project directory, gemini-cli looks for a GEMINI.md file for initial instructions about the project(context)
 
 install a new version of python with pyenv install 3.12.12(example). to set global/local(for the directory) version of python type pyenv global/local 3.12.12. To unistall -> pyenv uninstall 3.12.12
+
+find ~ -iname "*vscode*" -o -iname "*visual studio code*"
