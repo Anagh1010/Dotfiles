@@ -2,7 +2,7 @@
 	name = Anagh Bajpai
 	email = anaghb1010@gmail.com
 [core]
-	editor = nvim
+	editor = nano
 	autocrlf = input
 [credential]
-	helper = 
+	helper = oskeychain
