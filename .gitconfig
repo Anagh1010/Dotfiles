@@ -5,4 +5,4 @@
 	editor = nano
 	autocrlf = input
 [credential]
-	helper = oskeychain
+	helper = osxkeychain
