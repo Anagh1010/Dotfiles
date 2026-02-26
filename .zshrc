@@ -1,4 +1,3 @@
-export PATH="/usr/local/mysql/bin:$PATH"
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
@@ -15,3 +14,4 @@ function activate_ssd_pyenv() {
     fi
 }
 
+export PATH="$HOME/.some-node-modules-to-use-globally/node_modules/.bin:$PATH"

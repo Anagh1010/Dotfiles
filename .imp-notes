@@ -11,3 +11,6 @@ install a new version of python with pyenv install 3.12.12(example). to set glob
 find ~ -iname "*vscode*" -o -iname "*visual studio code*"
 
 pip cache purge
+
+brew installs for LazyVim -> fzf, fd, ripgrep
+npm installs for LazyVim -> tree-sitter-cli
