@@ -15,3 +15,5 @@ function activate_ssd_pyenv() {
 }
 
 export PATH="$HOME/.some-node-modules-to-use-globally/node_modules/.bin:$PATH"
+
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
