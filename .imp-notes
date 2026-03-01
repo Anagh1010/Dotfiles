@@ -12,5 +12,5 @@ find ~ -iname "*vscode*" -o -iname "*visual studio code*"
 
 pip cache purge
 
-brew installs for LazyVim -> fzf, fd, ripgrep
+brew installs for LazyVim -> fzf, fd, ripgrep, lazygit
 npm installs for LazyVim -> tree-sitter-cli
