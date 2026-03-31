@@ -14,3 +14,4 @@ pip cache purge
 
 brew installs for LazyVim -> fzf, fd, ripgrep, lazygit
 npm installs for LazyVim -> tree-sitter-cli
+ps aux | grep -Ei "bluestacks|bstk|hd-player|vbox"  for bluestacks related processes
