@@ -1,11 +1,14 @@
-eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init zsh)"
 
 export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
-export PATH="$HOME/.some-node-modules-to-use-globally/node_modules/.bin:$PATH"
+activate_pyenv() {
+  eval "$(pyenv init - zsh)"
+}
+
+export PATH="$HOME/.global_node_package/node_modules/.bin:$PATH"
 
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -15,7 +18,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 #History
-HISTSIZE=5000
+HISTSIZE=1000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
