@@ -1,15 +1,18 @@
+# starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-
 activate_pyenv() {
   eval "$(pyenv init - zsh)"
 }
 
-export PATH="$HOME/.global_node_package/node_modules/.bin:$PATH"
+# npm global-node-packages
+export PATH="$HOME/.global-node-packages/node_modules/.bin:$PATH"
 
+# zsh-autosuggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Keybindings

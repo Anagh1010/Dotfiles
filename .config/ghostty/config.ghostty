@@ -1,12 +1,14 @@
-font-family = JetBrainsMono Nerd Font
+theme = Catppuccin Mocha
+font-family = 0xProto Nerd Font Mono
+# font-style = SemiLight
 font-size = 15
+adjust-cell-height = 20%
 font-feature = liga
 # font-thicken = true
 window-width = 140
 window-height = 35
-theme = Catppuccin Mocha
 cursor-style = bar
-#cursor-style-blink = true
+# cursor-style-blink = true
 # shell-integration-features = no-cursor
 mouse-scroll-multiplier = 6
 # background-opacity = 0.90
