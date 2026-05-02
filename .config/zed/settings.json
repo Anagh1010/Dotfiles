@@ -7,6 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tabs": {
+    "file_icons": true
+  },
+  "restore_on_startup": "launchpad",
+  "session": {
+    "restore_unsaved_buffers": false
+  },
+  "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
+    "provider": "copilot"
+  },
+  "agent": {
+    "dock": "right",
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "project_panel": {
     "dock": "left"
   },
@@ -19,8 +38,8 @@
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "soft_wrap": "editor_width",
-  "ui_font_size": 16,
-  "buffer_font_size": 14.0,
+  "ui_font_size": 17.0,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
