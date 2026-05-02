@@ -10,5 +10,5 @@ window-height = 35
 cursor-style = bar
 # cursor-style-blink = true
 # shell-integration-features = no-cursor
-mouse-scroll-multiplier = 6
+# mouse-scroll-multiplier = 2
 # background-opacity = 0.90

@@ -1,8 +1,6 @@
-$HOME/Library/Application\ Support/com.mitchellh.ghostty/config. --> ghostty config file location
-$HOME/.config/ghostty/themes --> add theme files here and then change theme in config file
-$HOME/.config/ghostty/config --> config file location
-
-brew cleanup --prune=all --> cleanup all files instead of just files older than 120 days
+$HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty --> ghostty config file location
+$HOME/.config/ghostty/themes/ --> add theme files here and then change theme in config file
+$HOME/.config/ghostty/config.ghostty --> config file location
 
 run gemini-cli by running 'gemini' in the terminal. In a project directory, gemini-cli looks for a GEMINI.md file for initial instructions about the project(context)
 
@@ -12,6 +10,14 @@ find ~ -iname "*vscode*" -o -iname "*visual studio code*"
 
 pip cache purge
 
-brew installs for LazyVim -> fzf, fd, ripgrep, lazygit
 npm installs for LazyVim -> tree-sitter-cli
-ps aux | grep -Ei "bluestacks|bstk|hd-player|vbox"  for bluestacks related processes
+
+brew cleanup --prune=all --> cleanup all files instead of just files older than 120 days
+brew installs on fresh mac:->
+1. brew install --cask ghostty
+2. brew install starship
+3. brew install zsh-autosuggestions
+4. brew install stow node neovim pyenv
+5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig
+6. brew install fzf ripgrep fd lazygit fastfetch gemini-cli
+7. brew install --cask obsidian
