@@ -11,7 +11,9 @@
     "bindings": {
       "cmd-b": "workspace::ToggleLeftDock",
       "ctrl-~": "workspace::NewTerminal",
-      "ctrl-`": "terminal_panel::Toggle"
+      "ctrl-`": "terminal_panel::Toggle",
+      "cmd-shift-p": "command_palette::Toggle",
+      "cmd-shift-x": "zed::Extensions"
     },
   },
   {

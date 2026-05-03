@@ -21,3 +21,4 @@ brew installs on fresh mac:->
 5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig
 6. brew install fzf ripgrep fd lazygit fastfetch gemini-cli
 7. brew install --cask obsidian
+8. brew install --cask zed

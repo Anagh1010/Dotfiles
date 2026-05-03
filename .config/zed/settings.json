@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
+  },
   "tabs": {
     "file_icons": true
   },
@@ -21,6 +26,11 @@
     "provider": "copilot"
   },
   "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+      "enable_thinking": true
+    },
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],
@@ -29,7 +39,6 @@
   "project_panel": {
     "dock": "left"
   },
-  "icon_theme": "Catppuccin Mocha",
   "base_keymap": "VSCode",
   "autosave": {
     "after_delay": {
@@ -38,7 +47,7 @@
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "soft_wrap": "editor_width",
-  "ui_font_size": 17.0,
+  "ui_font_size": 16.0,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
