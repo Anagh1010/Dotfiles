@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_update": false,
   "icon_theme": {
     "mode": "system",
     "light": "Catppuccin Mocha",
@@ -37,6 +38,8 @@
     "model_parameters": []
   },
   "project_panel": {
+    "starts_open": true,
+    "sticky_scroll": false,
     "dock": "left"
   },
   "base_keymap": "VSCode",
@@ -47,7 +50,7 @@
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "soft_wrap": "editor_width",
-  "ui_font_size": 16.0,
+  "ui_font_size": 19.0,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",

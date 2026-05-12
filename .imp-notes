@@ -18,7 +18,7 @@ brew installs on fresh mac:->
 2. brew install starship
 3. brew install zsh-autosuggestions
 4. brew install stow node neovim pyenv
-5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig
+5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig (for pyenv[build dependencies])
 6. brew install fzf ripgrep fd lazygit fastfetch gemini-cli
 7. brew install --cask obsidian
-8. brew install --cask zed
+8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
