@@ -1,5 +1,5 @@
 # starship
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship-tokyonight.toml
 eval "$(starship init zsh)"
 
 # pyenv
