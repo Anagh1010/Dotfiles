@@ -1,8 +1,8 @@
 [user]
 	name = Anagh Bajpai
-	email = anaghb1010@gmail.com
+# email = anaghb1010@gmail.com
 [core]
 	editor = nvim
 	autocrlf = input
 [credential]
-#	helper = osxkeychain
+# helper = osxkeychain
