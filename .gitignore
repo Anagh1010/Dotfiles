@@ -1,3 +1,4 @@
 .DS_Store
 .PAT
 .config/zed/prompts
+.config/github-copilot
