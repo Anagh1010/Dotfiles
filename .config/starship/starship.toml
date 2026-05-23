@@ -1,24 +1,78 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+command_timeout = 5000
 
-format = """
-$directory\
-$character""""
+# Explicit layout order: Left side modules followed by right side duration
+format = """$directory$git_branch$git_status\
+$c$cpp$rust$golang$nodejs$php$java$kotlin$haskell$python\
+$line_break$character"""
+right_format = "$cmd_duration"
 
-[azure]
-symbol = "☁️ "
+[directory]
+style = "bold fg:#769ff0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[battery]
-full_symbol = "• "
-charging_symbol = "⇡ "
-discharging_symbol = "⇣ "
-unknown_symbol = "❓ "
-empty_symbol = "❗ "
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
-[erlang]
-symbol = "ⓔ "
+[git_branch]
+symbol = ""
+style = "bg:yellow"
+format = '[[$branch ](italic fg:#769ff0)]($style)'
+
+[git_status]
+style = "bg:yellow"
+format = '[[($all_status$ahead_behind )](italic fg:#769ff0)]($style)'
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[❯ ](bold fg:#769ff0)'
+error_symbol = '[❯ ](bold fg:red)'
+
+[cmd_duration]
+min_time = 2000
+show_milliseconds = false
+style = "fg:#A3C8FA"
+format = "[took ](fg:crust)[$duration](fg:#FCE99F)"
 
 [nodejs]
-symbol = "[⬢](bold green) "
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
 
-[pulumi]
-symbol = "🧊 "
+[c]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+
+[java]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+
+[python]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:#769ff0)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:sapphire"
+format = '[[ $symbol( $context) ](fg:#769ff0)]($style)'

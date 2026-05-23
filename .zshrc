@@ -1,5 +1,5 @@
 # starship
-export STARSHIP_CONFIG=~/.config/starship/starship-tokyonight.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # pyenv
@@ -15,12 +15,12 @@ export PATH="$HOME/.global-node-packages/node_modules/.bin:$PATH"
 # zsh-autosuggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#Keybindings
+# Keybindings
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
-#History
+# History
 HISTSIZE=1000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -33,5 +33,5 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-#Aliases
+# Aliases
 alias ls='ls --color'

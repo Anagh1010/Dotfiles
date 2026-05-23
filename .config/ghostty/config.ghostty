@@ -1,11 +1,11 @@
 theme = Catppuccin Mocha
 font-family = CaskaydiaCove Nerd Font Mono
-font-style = SemiLight
+#font-style = SemiLight
 font-size = 18
 adjust-cell-height = 20%
 font-feature = liga
-window-width = 85
-window-height = 25
+window-width = 105
+window-height = 28
 cursor-style = bar
 #cursor-style-blink = true
 #shell-integration-features = no-cursor
