@@ -3,14 +3,14 @@ command_timeout = 5000
 
 # Explicit layout order: Left side modules followed by right side duration
 format = """$directory$git_branch$git_status\
-$c$cpp$rust$golang$nodejs$php$java$kotlin$haskell$python\
+$c$cpp$rust$golang$nodejs$php$java$kotlin$haskell$python$docker_context\
 $line_break$character"""
 right_format = "$cmd_duration"
 
 [directory]
-style = "bold fg:#769ff0"
+style = "bold fg:#bb9af7"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -20,59 +20,83 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-symbol = ""
-style = "bg:yellow"
-format = '[[$branch ](italic fg:#769ff0)]($style)'
+symbol = " "
+style = "bold fg:#73daca"
+format = 'on [$symbol$branch]($style) '
 
 [git_status]
-style = "bg:yellow"
-format = '[[($all_status$ahead_behind )](italic fg:#769ff0)]($style)'
+style = "bold fg:#ff9e64"
+format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [line_break]
-disabled = true
+disabled = false
 
 [character]
 disabled = false
-success_symbol = '[❯ ](bold fg:#769ff0)'
-error_symbol = '[❯ ](bold fg:red)'
+success_symbol = '[ ❯](bold fg:#9ece6a)'
+error_symbol = '[ ❯](bold fg:#f7768e)'
 
 [cmd_duration]
 min_time = 2000
 show_milliseconds = false
-style = "fg:#A3C8FA"
-format = "[took ](fg:crust)[$duration](fg:#FCE99F)"
+style = "bold fg:#e0af68"
+format = "[took ](fg:crust)[$duration]($style)"
 
-[nodejs]
-symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+# ==========================================
+# LANGUAGE INDICATORS (TokyoNight Palette)
+# ==========================================
 
 [c]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+style = "bold fg:#7dcfff"
+format = 'via [$symbol($version )]($style)'
 
 [cpp]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+style = "bold fg:#7dcfff"
+format = 'via [$symbol($version )]($style)'
 
 [rust]
-symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+symbol = " "
+style = "bold fg:#ff9e64"
+format = 'via [$symbol($version )]($style)'
+
+[golang]
+symbol = " "
+style = "bold fg:#73daca"
+format = 'via [$symbol($version )]($style)'
+
+[nodejs]
+symbol = " "
+style = "bold fg:#e0af68"
+format = 'via [$symbol($version )]($style)'
+
+[php]
+symbol = "🐘 "
+style = "bold fg:#bb9af7"
+format = 'via [$symbol($version )]($style)'
 
 [java]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:#769ff0)]($style)'
+style = "bold fg:#f7768e"
+format = 'via [$symbol($version )]($style)'
+
+[kotlin]
+symbol = "🅺 "
+style = "bold fg:#bb9af7"
+format = 'via [$symbol($version )]($style)'
+
+[haskell]
+symbol = " "
+style = "bold fg:#7aa2f7"
+format = 'via [$symbol($version )]($style)'
 
 [python]
-symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:#769ff0)]($style)'
+symbol = " "
+style = "bold fg:#e0af68"
+format = 'via [$symbol($version )(\($virtualenv\) )]($style)'
 
 [docker_context]
-symbol = ""
-style = "bg:sapphire"
-format = '[[ $symbol( $context) ](fg:#769ff0)]($style)'
+symbol = " "
+style = "bold fg:#7aa2f7"
+format = 'outside [$symbol($context )]($style)'

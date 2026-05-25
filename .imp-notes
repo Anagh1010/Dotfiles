@@ -22,3 +22,6 @@ brew installs on fresh mac:->
 6. brew install fzf ripgrep fd lazygit fastfetch gemini-cli
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
+
+if you want custom brew cask install location then do this ->
+--appdir=/Volumes/SN7100-500GB/Applications
