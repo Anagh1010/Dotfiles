@@ -1,6 +1,6 @@
 .git
 .gitignore
 README.md
-.PAT
+PAT.txt
 .DS_Store
 .config/.DS_Store

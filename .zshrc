@@ -3,7 +3,7 @@
 # ==========================================
 
 # Custom Starship Config Path
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship-minimal-tokyonight.toml
 
 # Pyenv Config
 export PYENV_ROOT="$HOME/.pyenv"

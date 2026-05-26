@@ -1,11 +1,11 @@
 theme = TokyoNight
 font-family = 0xProto Nerd Font Mono
 #font-style = SemiLight
-font-size = 22
+font-size = 20
 adjust-cell-height = 20%
 font-feature = liga
-window-width = 100
-window-height = 22
+window-width = 110
+window-height = 25
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor

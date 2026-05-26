@@ -10,14 +10,15 @@ right_format = "$cmd_duration"
 [directory]
 style = "bold fg:#bb9af7"
 format = "[ $path ]($style)"
-truncation_length = 2
+truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"Developer" = "󰲋"
 
 [git_branch]
 symbol = " "
