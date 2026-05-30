@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
   "auto_update": false,
   "icon_theme": {
     "mode": "system",
@@ -24,7 +33,7 @@
     "copilot": {
       "enable_next_edit_suggestions": true
     },
-    "provider": "copilot"
+    "provider": "none"
   },
   "agent": {
     "default_model": {
@@ -54,7 +63,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Mocha (red)",
+    "light": "Tokyo Night Light",
+    "dark": "Tokyo Night",
   },
 }
