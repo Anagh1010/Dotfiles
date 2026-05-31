@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# OS metadata
+.DS_Store
+
+# Generated configuration data
+# NOTE: If you want to deploy the website as a 100% static site to Vercel or GitHub Pages 
+# without giving it access to your dotfiles repo, comment out 'public/data.json' below 
+# so it gets committed directly to GitHub.
+public/data.json

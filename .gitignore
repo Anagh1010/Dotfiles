@@ -4,4 +4,6 @@
 .config/github-copilot
 PAT.txt
 .secrets
-website/
+# Track the website codebase but ignore its dynamic assets/dependencies
+website/node_modules/
+website/public/data.json
