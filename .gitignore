@@ -3,3 +3,5 @@
 .config/zed/prompts
 .config/github-copilot
 PAT.txt
+.secrets
+website/

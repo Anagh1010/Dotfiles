@@ -15,6 +15,9 @@ activate_pyenv() {
 # NPM Global Packages
 export PATH="$HOME/.global-node-packages/node_modules/.bin:$PATH"
 
+# API KEYs in .secrets
+source $HOME/.secrets
+
 
 # ==========================================
 # 2. SHELL OPTIONS & HISTORY

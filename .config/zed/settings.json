@@ -8,9 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent_servers": {
-    "github-copilot-cli": {
-      "type": "registry"
-    }
+    
   },
   "telemetry": {
     "diagnostics": true,
@@ -19,7 +17,7 @@
   "auto_update": false,
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha"
   },
   "tabs": {
@@ -30,15 +28,13 @@
     "restore_unsaved_buffers": false
   },
   "edit_predictions": {
-    "copilot": {
-      "enable_next_edit_suggestions": true
-    },
-    "provider": "none"
+    "provider": "zed"
   },
   "agent": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
+      "effort": "medium",
+      "provider": "google",
+      "model": "gemini-3.5-flash",
       "enable_thinking": true
     },
     "dock": "right",
@@ -57,7 +53,7 @@
       "milliseconds": 1000,
     },
   },
-  "buffer_font_family": "0xProto Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "soft_wrap": "editor_width",
   "ui_font_size": 19.0,
   "buffer_font_size": 15.0,
