@@ -1,32 +1,16 @@
-# ==========================================
-# 1. PATHS & ENVIRONMENT VARIABLES
-# ==========================================
-
-# Custom Starship Config Path
+# Paths & Env
 export STARSHIP_CONFIG=~/.config/starship/starship-minimal-tokyonight.toml
-
-# Pyenv Config
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-activate_pyenv() {
-  eval "$(pyenv init - zsh)"
-}
-
-# NPM Global Packages
+activate_pyenv() { eval "$(pyenv init - zsh)"; }
 export PATH="$HOME/.global-node-packages/node_modules/.bin:$PATH"
-
-# API KEYs in .secrets
 source $HOME/.secrets
 
-
-# ==========================================
-# 2. SHELL OPTIONS & HISTORY
-# ==========================================
-HISTSIZE=1000
-HISTFILE=~/.zsh_history
-SAVEHIST=$HISTSIZE
+# History
+HISTSIZE=1000; 
+HISTFILE=~/.zsh_history; 
+SAVEHIST=1000; 
 HISTDUP=erase
-
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -35,23 +19,15 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-
-# ==========================================
-# 3. ALIASES & KEYBINDINGS
-# ==========================================
+# Aliases & Keybindings
 alias ls='ls --color'
-
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
-
-# ==========================================
-# 4. PLUGINS & PROMPT (Must be absolute last)
-# ==========================================
-
-# Zsh-Autosuggestions (Must load before prompt, after keybindings)
+# Plugins & Prompt
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Starship Prompt (Always initialized dead last)
 eval "$(starship init zsh)"
+
+# Startup
+fastfetch

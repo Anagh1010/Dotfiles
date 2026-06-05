@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "when_closing_with_no_tabs": "platform_default",
+  "on_last_window_closed": "platform_default",
+  "proxy": "",
   "agent_servers": {
     
   },
@@ -21,7 +24,7 @@
     "dark": "Catppuccin Mocha"
   },
   "tabs": {
-    "file_icons": true
+    "file_icons": false
   },
   "restore_on_startup": "launchpad",
   "session": {
@@ -32,9 +35,9 @@
   },
   "agent": {
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "provider": "google",
-      "model": "gemini-3.5-flash",
+      "model": "gemini-3.1-pro-preview",
       "enable_thinking": true
     },
     "dock": "right",
@@ -53,13 +56,14 @@
       "milliseconds": 1000,
     },
   },
+  "ui_font_family": "0xProto Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "soft_wrap": "editor_width",
-  "ui_font_size": 19.0,
+  "ui_font_size": 17.0,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Tokyo Night Light",
-    "dark": "Tokyo Night",
+    "light": "One Light",
+    "dark": "One Dark"
   },
 }

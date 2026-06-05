@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // DOM Elements
   const initialLoader = document.getElementById('initial-loader');
-  const themeToggle = document.getElementById('theme-toggle');
   const treeContainer = document.getElementById('tree-container');
   const fileSearch = document.getElementById('file-search');
   const searchClear = document.getElementById('search-clear');
@@ -22,32 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const commitMessage = document.getElementById('commit-message');
   const commitAuthor = document.getElementById('commit-author');
   const commitDate = document.getElementById('commit-date');
-
-  // ==========================================================================
-  // Theme Toggle Logic
-  // ==========================================================================
-  const savedTheme = localStorage.getItem('theme-preference') || 'dark';
-  setTheme(savedTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.classList.contains('light-theme') ? 'light' : 'dark';
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-  });
-
-  function setTheme(theme) {
-    if (theme === 'light') {
-      document.documentElement.classList.remove('dark-theme');
-      document.documentElement.classList.add('light-theme');
-      themeToggle.innerHTML = '<i class="ri-sun-line"></i>';
-      localStorage.setItem('theme-preference', 'light');
-    } else {
-      document.documentElement.classList.remove('light-theme');
-      document.documentElement.classList.add('dark-theme');
-      themeToggle.innerHTML = '<i class="ri-moon-line"></i>';
-      localStorage.setItem('theme-preference', 'dark');
-    }
-  }
 
   // ==========================================================================
   // Data Fetching and Initialization

@@ -2,10 +2,9 @@ add_newline = true
 command_timeout = 5000
 
 # Explicit layout order: Left side modules followed by right side duration
-format = """$directory$git_branch$git_status\
-$c$cpp$rust$golang$nodejs$php$java$kotlin$haskell$python$docker_context\
+format = """$directory\
 $line_break$character"""
-right_format = "$cmd_duration"
+right_format = "$git_branch$git_status$c$cpp$rust$nodejsjava$python$cmd_duration"
 
 [directory]
 style = "fg:#bb9af7"
@@ -30,12 +29,12 @@ style = "fg:#ff9e64"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [line_break]
-disabled = false
-
+disabled = true
+#  ❯
 [character]
 disabled = false
-success_symbol = '[ ❯](fg:#9ece6a)'
-error_symbol = '[ ❯](fg:#f7768e)'
+success_symbol = '[](fg:#9ece6a)'
+error_symbol = '[](fg:#f7768e)'
 
 [cmd_duration]
 min_time = 2000
@@ -76,8 +75,3 @@ format = 'via [$symbol($version )]($style)'
 symbol = " "
 style = "fg:#e0af68"
 format = 'via [$symbol($version )(\($virtualenv\) )]($style)'
-
-[docker_context]
-symbol = " "
-style = "fg:#7aa2f7"
-format = 'outside [$symbol($context )]($style)'

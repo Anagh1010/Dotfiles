@@ -47,7 +47,7 @@ try {
       return gitPath.replace('.config/zed/', 'zed/');
     }
     if (gitPath.startsWith('.config/nvim/')) {
-      return gitPath.replace('.config/nvim/', 'neovim/');
+      return gitPath.replace('.config/nvim/', 'lazyvim/');
     }
     if (gitPath.startsWith('.config/nvim-my/')) {
       return gitPath.replace('.config/nvim-my/', 'neovim-custom/');
