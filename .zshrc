@@ -21,6 +21,12 @@ setopt hist_find_no_dups
 
 # Aliases & Keybindings
 alias ls='ls --color'
+alias vim='nvim'
+alias vi='nvim'
+alias c='clear'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward

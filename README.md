@@ -6,7 +6,7 @@ This repository contains the dotfiles and configurations for my macOS system, ma
 
 - **Shell:** Zsh with [Starship](https://starship.rs/) prompt and Zsh-Autosuggestions
 - **Terminal:** [Ghostty](https://ghostty.org/)
-- **Editors:** Neovim (`nvim` & `nvim-my`), Vim, and Zed
+- **Editors:** Neovim (`nvim` & `nvim-my`) and Zed
 - **Development Tools:** Git, Pyenv, Node
 - **System Info:** Fastfetch
 
@@ -44,10 +44,13 @@ stow .
 
 ## 📁 Repository Structure
 
-- `.config/`: Configurations for `fastfetch`, `ghostty`, `nvim`, `starship`, and `zed`
+- `.config/`: Configurations for `fastfetch`, `ghostty`, `nvim`, `nvim-my`, `starship`, and `zed`
 - `.zshrc` / `.zprofile`: Zsh shell configurations, environment variables, and aliases
 - `.gitconfig`: Global Git configuration
-- `.vimrc`: Vim text editor settings
+- `.gitignore`: Files and directories ignored by Git
+- `.imp-notes`: Important personal notes
+- `.secrets`: Sensitive environment variables or configurations
+- `GEMINI.md`: AI coding assistant rules and instructions
 - `website/`: Personal website generator/server files
 
 ### Running the Website Locally

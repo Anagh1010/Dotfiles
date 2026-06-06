@@ -56,14 +56,14 @@
       "milliseconds": 1000,
     },
   },
-  "ui_font_family": "0xProto Nerd Font Mono",
+  "ui_font_family": ".ZedMono",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "soft_wrap": "editor_width",
-  "ui_font_size": 17.0,
+  "ui_font_size": 16.0,
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Tokyo Night"
   },
 }
