@@ -2,7 +2,7 @@ $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty --> ghos
 $HOME/.config/ghostty/themes/ --> add theme files here and then change theme in config file
 $HOME/.config/ghostty/config.ghostty --> config file location
 
-run gemini-cli by running 'gemini' in the terminal. In a project directory, gemini-cli looks for a GEMINI.md file for initial instructions about the project(context)
+run antigravity-cli by running 'agy' in the terminal. In a project directory, antigravity-cli looks for a GEMINI.md file for initial instructions about the project(context)
 
 install a new version of python with pyenv install 3.12.12(example). to set global/local(for the directory) version of python type pyenv global/local 3.12.12. To unistall -> pyenv uninstall 3.12.12
 
@@ -19,9 +19,10 @@ brew installs on fresh mac:->
 3. brew install zsh-autosuggestions
 4. brew install stow node neovim pyenv
 5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig (for pyenv[build dependencies])
-6. brew install fzf ripgrep fd lazygit fastfetch gemini-cli
+6. brew install fzf ripgrep fd lazygit fastfetch
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
+brew install --cask antigravity antigravity-cli claude
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
