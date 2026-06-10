@@ -1,63 +1,87 @@
 # My Dotfiles
 
-This repository contains the dotfiles and configurations for my macOS system, managed using [GNU Stow](https://www.gnu.org/software/stow/).
+Configurations for my macOS system, managed using [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## 📦 What's Included
 
-- **Shell:** Zsh with [Starship](https://starship.rs/) prompt and Zsh-Autosuggestions
-- **Terminal:** [Ghostty](https://ghostty.org/)
-- **Editors:** Neovim (`nvim` & `nvim-my`) and Zed
-- **Development Tools:** Git, Pyenv, Node
-- **System Info:** Fastfetch
+| Package | Description |
+|---------|-------------|
+| `fastfetch` | System info display config |
+| `ghostty` | [Ghostty](https://ghostty.org/) terminal config |
+| `git` | Global Git configuration |
+| `lazyvim` | [LazyVim](https://www.lazyvim.org/) Neovim distribution (`nvim`) |
+| `neovim` | Custom Neovim config (`nvim-my`) |
+| `random` | Miscellaneous files (`.imp-notes`) |
+| `starship` | [Starship](https://starship.rs/) prompt themes |
+| `zed` | [Zed](https://zed.dev/) editor settings, keymaps & themes |
+| `zsh` | Zsh shell config (`.zshrc`, `.zprofile`) |
+| `website` | Personal website *(not stowed — standalone project)* |
 
 ## 🛠️ Prerequisites
 
-Ensure you have the following installed on your system:
-
-- [Git](https://git-scm.com/)
-- [GNU Stow](https://www.gnu.org/software/stow/)
-
-On macOS, you can install these via [Homebrew](https://brew.sh/):
+Install via [Homebrew](https://brew.sh/):
 
 ```bash
-brew install git stow
+brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
 ```
-
-*(You may also want to install the tools configured in this repo, such as `neovim`, `starship`, `fastfetch`, `pyenv`, etc.)*
 
 ## 🚀 Installation
 
-1. Clone the repository into your `$HOME` directory:
+1. **Clone** into your home directory:
 
-```bash
-git clone https://github.com/Anagh1010/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-```
+    ```bash
+    git clone https://github.com/Anagh1010/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+    ```
 
-2. Use GNU Stow to create symlinks to your home directory:
+2. **Stow** all packages:
 
-```bash
-stow .
-```
+    ```bash
+    stow --verbose --restow --no-folding */
+    ```
 
-*Note: The `.stow-local-ignore` file ensures that repo-specific files like this `README.md` and `.git` are not symlinked.*
+    Or use the built-in alias after sourcing `.zshrc`:
+
+    ```bash
+    dotfiles-stow
+    ```
+
+> [!NOTE]
+> The `website` package is automatically excluded — its `.stow-local-ignore` ignores all files. New packages added to the repo are auto-included by the `*/` glob.
 
 ## 📁 Repository Structure
 
-- `.config/`: Configurations for `fastfetch`, `ghostty`, `nvim`, `nvim-my`, `starship`, and `zed`
-- `.zshrc` / `.zprofile`: Zsh shell configurations, environment variables, and aliases
-- `.gitconfig`: Global Git configuration
-- `.gitignore`: Files and directories ignored by Git
-- `.imp-notes`: Important personal notes
-- `.secrets`: Sensitive environment variables or configurations
-- `GEMINI.md`: AI coding assistant rules and instructions
-- `website/`: Personal website generator/server files
+```
+~/dotfiles/
+├── fastfetch/      → .config/fastfetch/
+├── ghostty/        → .config/ghostty/
+├── git/            → .gitconfig
+├── lazyvim/        → .config/nvim/
+├── neovim/         → .config/nvim-my/
+├── random/         → .imp-notes
+├── starship/       → .config/starship/
+├── zed/            → .config/zed/
+├── zsh/            → .zshrc, .zprofile
+└── website/        → (not stowed)
+```
 
-### Running the Website Locally
+## ⚙️ Stow Ignore Files
 
-To run the local website server, navigate to the `website/` directory and execute the following commands:
+- **`.stow-local-ignore`** (repo root) — ignores repo-level files (`.git`, `README.md`, `.DS_Store`, etc.) from being symlinked
+- **`random/.stow-local-ignore`** — ignores `.secrets` within the `random` package
+- **`website/.stow-local-ignore`** — ignores all files (`.+`), effectively excluding the package from stowing
+
+> [!IMPORTANT]
+> `.stow-local-ignore` uses **Perl regex** (not globs). Escape dots: `\.DS_Store`, not `.DS_Store`. Patterns in the root ignore file apply to the stow directory, not inside packages — use per-package ignore files for package-level filtering.
+
+> [!TIP]
+> To exclude a new package from stowing, add a `.stow-local-ignore` file containing `.+` inside its directory.
+
+## 🌐 Running the Website Locally
 
 ```bash
+cd ~/dotfiles/website
+npm install
 npm run build
 npm start
 ```

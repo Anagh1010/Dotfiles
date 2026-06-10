@@ -1,10 +1,8 @@
 .DS_Store
-.PAT
-.config/zed/prompts
-.config/github-copilot
-PAT.txt
-.secrets
+zed/.config/zed/prompts
+random/.secrets
 # Track the website codebase but ignore its dynamic assets/dependencies
 website/node_modules/
 website/public/data.json
+website/.stow-local-ignore
 .antigravitycli/

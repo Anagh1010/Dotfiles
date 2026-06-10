@@ -1,2 +1,2 @@
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
-source $HOME/.secrets
+source $HOME/dotfiles/random/.secrets
