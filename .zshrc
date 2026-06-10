@@ -4,7 +4,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 activate_pyenv() { eval "$(pyenv init - zsh)"; }
 export PATH="$HOME/.global-node-packages/node_modules/.bin:$PATH"
-source $HOME/.secrets
 
 # History
 HISTSIZE=1000; 
@@ -24,6 +23,7 @@ alias ls='ls --color'
 alias vim='nvim'
 alias vi='nvim'
 alias c='clear'
+alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
