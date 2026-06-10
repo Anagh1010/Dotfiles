@@ -43,29 +43,48 @@ try {
       return null;
     }
 
-    if (gitPath.startsWith('.config/zed/')) {
-      return gitPath.replace('.config/zed/', 'zed/');
+    // Map package directory → display name and strip prefix
+    const packageMap = {
+      'fastfetch/.config/fastfetch/': 'fastfetch/',
+      'ghostty/.config/ghostty/':     'ghostty/',
+      'lazyvim/.config/nvim/':        'lazyvim/',
+      'neovim/.config/nvim-my/':      'neovim-custom/',
+      'starship/.config/starship/':   'starship/',
+      'zed/.config/zed/':             'zed/',
+      'git/':                         'git/',
+      'zsh/':                         'shell/',
+    };
+
+    // Also handle flat paths (local builds where git follows stow symlinks)
+    const flatMap = {
+      '.config/zed/':       'zed/',
+      '.config/nvim/':      'lazyvim/',
+      '.config/nvim-my/':   'neovim-custom/',
+      '.config/ghostty/':   'ghostty/',
+      '.config/starship/':  'starship/',
+      '.config/fastfetch/': 'fastfetch/',
+    };
+
+    // Try per-package paths first
+    for (const [prefix, displayPrefix] of Object.entries(packageMap)) {
+      if (gitPath.startsWith(prefix)) {
+        return displayPrefix + gitPath.slice(prefix.length);
+      }
     }
-    if (gitPath.startsWith('.config/nvim/')) {
-      return gitPath.replace('.config/nvim/', 'lazyvim/');
+
+    // Try flat paths (local stow symlink resolution)
+    for (const [prefix, displayPrefix] of Object.entries(flatMap)) {
+      if (gitPath.startsWith(prefix)) {
+        return displayPrefix + gitPath.slice(prefix.length);
+      }
     }
-    if (gitPath.startsWith('.config/nvim-my/')) {
-      return gitPath.replace('.config/nvim-my/', 'neovim-custom/');
-    }
-    if (gitPath.startsWith('.config/ghostty/')) {
-      return gitPath.replace('.config/ghostty/', 'ghostty/');
-    }
-    if (gitPath.startsWith('.config/starship/')) {
-      return gitPath.replace('.config/starship/', 'starship/');
-    }
-    if (gitPath.startsWith('.config/fastfetch/')) {
-      return gitPath.replace('.config/fastfetch/', 'fastfetch/');
-    }
+
+    // Handle flat shell files
     if (gitPath === '.zshrc' || gitPath === '.zprofile') {
       return `shell/${gitPath}`;
     }
     if (gitPath === '.gitconfig') {
-      return `git/.gitconfig`;
+      return 'git/.gitconfig';
     }
 
     return null;
