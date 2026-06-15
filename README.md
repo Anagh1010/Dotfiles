@@ -37,7 +37,7 @@ brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
 2. **Stow** all packages:
 
     ```bash
-    stow --verbose --restow --no-folding */
+    find . -name ".DS_Store" -delete && stow --verbose --restow */
     ```
 
     Or use the built-in alias after sourcing `.zshrc`:
@@ -47,7 +47,7 @@ brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
     ```
 
 > [!NOTE]
-> The `website` package is automatically excluded — its `.stow-local-ignore` ignores all files. New packages added to the repo are auto-included by the `*/` glob.
+> The `dotfiles-stow` alias automatically cleans `.DS_Store` files before stowing. The `website` package is automatically excluded via its `.stow-local-ignore`. New packages are auto-included by the `*/` glob.
 
 ## 📁 Repository Structure
 
@@ -67,12 +67,12 @@ brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
 
 ## ⚙️ Stow Ignore Files
 
-- **`.stow-local-ignore`** (repo root) — ignores repo-level files (`.git`, `README.md`, `.DS_Store`, etc.) from being symlinked
+- **`.stow-local-ignore`** (repo root) — ignores repo-level files (`.git`, `README.md`, `GEMINI.md`, etc.)
 - **`random/.stow-local-ignore`** — ignores `.secrets` within the `random` package
 - **`website/.stow-local-ignore`** — ignores all files (`.+`), effectively excluding the package from stowing
 
-> [!IMPORTANT]
-> `.stow-local-ignore` uses **Perl regex** (not globs). Escape dots: `\.DS_Store`, not `.DS_Store`. Patterns in the root ignore file apply to the stow directory, not inside packages — use per-package ignore files for package-level filtering.
+> [!NOTE]
+> `.DS_Store` files are cleaned by the `dotfiles-stow` alias before stowing, rather than via ignore patterns.
 
 > [!TIP]
 > To exclude a new package from stowing, add a `.stow-local-ignore` file containing `.+` inside its directory.

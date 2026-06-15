@@ -1,7 +1,5 @@
 .git
 .gitignore
-README\.md
-\.DS_Store
-\.antigravitycli
-GEMINI\.md
-\.secrets
+README.md
+.antigravitycli
+GEMINI.md
