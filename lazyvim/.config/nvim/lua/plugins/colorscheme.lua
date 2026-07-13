@@ -22,13 +22,16 @@ return {
       },
     },
   },
+  -- Configure Tokyonight
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "night" },
+    opts = {
+      style = "night",
+    },
   },
 
-  -- Tell LazyVim to use Catppuccin
+  -- Tell LazyVim which theme to use
   {
     "LazyVim/LazyVim",
     opts = {

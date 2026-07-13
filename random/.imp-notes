@@ -22,7 +22,8 @@ brew installs on fresh mac:->
 6. brew install fzf ripgrep fd lazygit fastfetch
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
-9. brew install --cask antigravity antigravity-cli claude zen
+9. brew install --cask antigravity claude
+10. brew install yazi
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
