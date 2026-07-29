@@ -28,6 +28,7 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias dotfiles-stow='(cd ~/dotfiles && find . -name ".DS_Store" -delete && stow --verbose --restow */)'
+alias cdp='cd ~/Developer/projects'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
