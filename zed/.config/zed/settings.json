@@ -65,7 +65,7 @@
   "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "light": "One Light",
+    "dark": "Catppuccin Mocha (blue)"
   },
 }
