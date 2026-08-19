@@ -19,22 +19,14 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases & Keybindings
-alias ls='ls --color'
-alias vim='nvim'
-alias vi='nvim'
-alias c='clear'
-alias gs='git status'
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push'
 alias dotfiles-stow='(cd ~/dotfiles && find . -name ".DS_Store" -delete && stow --verbose --restow */)'
-alias cdp='cd ~/Developer/projects'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # Plugins & Prompt
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 
 # Startup

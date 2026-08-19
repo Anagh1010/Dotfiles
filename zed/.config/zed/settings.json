@@ -12,7 +12,7 @@
   "on_last_window_closed": "platform_default",
   "proxy": "",
   "agent_servers": {
-    
+
   },
   "telemetry": {
     "diagnostics": false,
@@ -21,8 +21,8 @@
   "auto_update": false,
   "icon_theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
   },
   "tabs": {
     "file_icons": false
@@ -35,10 +35,11 @@
     "provider": "zed"
   },
   "agent": {
+    "default_profile": "write",
     "default_model": {
       "effort": "high",
       "provider": "google",
-      "model": "gemini-3.1-pro-preview",
+      "model": "gemini-3.5-flash",
       "enable_thinking": true
     },
     "dock": "right",

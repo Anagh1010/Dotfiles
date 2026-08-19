@@ -20,11 +20,21 @@
     "type": "small",
     "height": 4,
     "padding": {
-      "top": 2,
+      "top": 4,
       "left": 2
     }
   },
   "modules": [
+    "break",
+    {
+      "type": "title",
+      "key": " ",
+      "color": {
+        "user": "white",
+        "at": "white",
+        "host": "white"
+      }
+    },
     "break",
     {
       "type": "os",
