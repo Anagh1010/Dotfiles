@@ -19,6 +19,11 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases & Keybindings
+alias c='clear'
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
 alias dotfiles-stow='(cd ~/dotfiles && find . -name ".DS_Store" -delete && stow --verbose --restow */)'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward

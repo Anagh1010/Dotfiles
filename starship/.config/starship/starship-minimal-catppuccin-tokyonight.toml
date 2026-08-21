@@ -65,7 +65,7 @@ crust     = "#101014"
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
 [directory]
-style             = "fg:blue"
+style             = "fg:#73dacb"
 format            = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -79,11 +79,11 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style  = "fg:teal"
+style  = "fg:#cfc9c2"
 format = 'on [$symbol$branch]($style) '
 
 [git_status]
-style  = "fg:peach"
+style  = "fg:#f7768e"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [line_break]
@@ -91,8 +91,8 @@ disabled = true
 #  ❯
 [character]
 disabled = false
-success_symbol = '[](fg:green)'
-error_symbol = '[](fg:red)'
+success_symbol = '[ ](fg:blue)'
+error_symbol = '[ ](fg:red)'
 
 [cmd_duration]
 min_time          = 2000
