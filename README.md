@@ -14,8 +14,8 @@ Configurations for my macOS system, managed using [GNU Stow](https://www.gnu.org
 | `random` | Miscellaneous files (`.imp-notes`) |
 | `starship` | [Starship](https://starship.rs/) prompt themes |
 | `zed` | [Zed](https://zed.dev/) editor settings, keymaps & themes |
+| `yazi` | [Yazi](https://yazi-rs.github.io/) terminal file manager config |
 | `zsh` | Zsh shell config (`.zshrc`, `.zprofile`) |
-| `website` | Personal website *(not stowed — standalone project)* |
 
 ## 🛠️ Prerequisites
 
@@ -47,7 +47,7 @@ brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
     ```
 
 > [!NOTE]
-> The `dotfiles-stow` alias automatically cleans `.DS_Store` files before stowing. The `website` package is automatically excluded via its `.stow-local-ignore`. New packages are auto-included by the `*/` glob.
+> The `dotfiles-stow` alias automatically cleans `.DS_Store` files before stowing. New packages are auto-included by the `*/` glob.
 
 ## 📁 Repository Structure
 
@@ -60,28 +60,18 @@ brew install git stow neovim starship fastfetch pyenv zsh-autosuggestions
 ├── neovim/         → .config/nvim-my/
 ├── random/         → .imp-notes
 ├── starship/       → .config/starship/
+├── yazi/           → .config/yazi/
 ├── zed/            → .config/zed/
-├── zsh/            → .zshrc, .zprofile
-└── website/        → (not stowed)
+└── zsh/            → .zshrc, .zprofile
 ```
 
 ## ⚙️ Stow Ignore Files
 
 - **`.stow-local-ignore`** (repo root) — ignores repo-level files (`.git`, `README.md`, `GEMINI.md`, etc.)
 - **`random/.stow-local-ignore`** — ignores `.secrets` within the `random` package
-- **`website/.stow-local-ignore`** — ignores all files (`.+`), effectively excluding the package from stowing
 
 > [!NOTE]
 > `.DS_Store` files are cleaned by the `dotfiles-stow` alias before stowing, rather than via ignore patterns.
 
 > [!TIP]
 > To exclude a new package from stowing, add a `.stow-local-ignore` file containing `.+` inside its directory.
-
-## 🌐 Running the Website Locally
-
-```bash
-cd ~/dotfiles/website
-npm install
-npm run build
-npm start
-```
