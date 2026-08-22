@@ -37,10 +37,10 @@
   "agent": {
     "default_profile": "write",
     "default_model": {
-      "effort": "high",
+      "effort": "medium",
       "provider": "google",
-      "model": "gemini-3.5-flash",
-      "enable_thinking": true
+      "model": "gemini-3.6-flash",
+      "enable_thinking": false
     },
     "dock": "right",
     "sidebar_side": "right",

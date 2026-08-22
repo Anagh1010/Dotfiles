@@ -22,8 +22,8 @@ brew installs on fresh mac:->
 6. brew install fzf ripgrep fd lazygit fastfetch
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
-9. brew install --cask antigravity codex chatgpt brave-browser zen
-10. brew install yazi zsh-syntax-highlighting
+9. brew install --cask antigravity codex chatgpt brave-browser
+10. brew install yazi zsh-syntax-highlighting eza
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications

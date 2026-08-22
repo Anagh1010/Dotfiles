@@ -1,5 +1,5 @@
 # Paths & Env
-export STARSHIP_CONFIG=~/.config/starship/starship-minimal-catppuccin-tokyonight.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 activate_pyenv() { eval "$(pyenv init - zsh)"; }
@@ -25,6 +25,8 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias dotfiles-stow='(cd ~/dotfiles && find . -name ".DS_Store" -delete && stow --verbose --restow */)'
+alias cdp='cd ~/Developer/projects'
+alias ls='eza -l --header --icons --group-directories-first'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
