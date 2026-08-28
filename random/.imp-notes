@@ -23,7 +23,59 @@ brew installs on fresh mac:->
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
 9. brew install --cask antigravity codex chatgpt brave-browser
-10. brew install yazi zsh-syntax-highlighting eza
+10. brew install yazi zsh-syntax-highlighting eza mole
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
+
+
+fetch('https://openrouter.ai/api/v1/chat/completions', {
+  method: 'POST',
+  headers: {
+    Authorization: 'Bearer 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',
+    'HTTP-Referer': '<YOUR_SITE_URL>',
+    'X-Title': '<YOUR_SITE_NAME>',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'openai/gpt-4o',
+    messages: [
+      {
+        role: 'user',
+        content: 'What is the meaning of life?',
+      },
+    ],
+  }),
+});
+
+
+curl https://openrouter.ai/api/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer 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" \
+  -d '{
+  "model": "openai/gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the meaning of life?"
+    }
+  ]
+}'
+
+
+# My Lines
+#model_provider = "openrouter"
+#model = "stealth/ox-alpha"
+#model_reasoning_effort = "high"
+
+#[model_providers.openrouter]
+#name = "OpenRouter"
+#base_url = "https://openrouter.ai/api/v1"
+#env_key = "OPENROUTER_API_KEY"
+#wire_api = "responses"
+
+
+approval_policy = "on-request"
+approvals_reviewer = "user"
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"

@@ -1,5 +1,5 @@
 theme = TokyoNight
-font-family = JetBrainsMono Nerd Font
+font-family = 0xProto Nerd Font Mono
 font-size = 18
 font-feature = liga
 window-width = 115
@@ -9,4 +9,4 @@ cursor-style = bar
 #shell-integration-features = no-cursor
 #background-opacity = 0.8
 #background-blur = true
-#adjust-cell-height = 20%
+adjust-cell-height = -10%
