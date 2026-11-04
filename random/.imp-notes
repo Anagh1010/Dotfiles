@@ -35,7 +35,7 @@ brew uninstall --cask --zap <cask-name>
 fetch('https://openrouter.ai/api/v1/chat/completions', {
   method: 'POST',
   headers: {
-    Authorization: 'Bearer sk-or-v1-374b405fd2357c7c0381284ac7f45e185032c3f7addc41e1be2ce8bc.......',
+    Authorization: 'Bearer <api key>',
     'HTTP-Referer': '<YOUR_SITE_URL>',
     'X-Title': '<YOUR_SITE_NAME>',
     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ fetch('https://openrouter.ai/api/v1/chat/completions', {
 
 curl https://openrouter.ai/api/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <token>" \
+  -H "Authorization: Bearer <api key>" \
   -d '{
   "model": "openai/gpt-4o",
   "messages": [
