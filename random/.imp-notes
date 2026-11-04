@@ -22,17 +22,20 @@ brew installs on fresh mac:->
 6. brew install fzf ripgrep fd lazygit fastfetch
 7. brew install --cask obsidian
 8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
-9. brew install --cask antigravity codex chatgpt brave-browser
-10. brew install yazi zsh-syntax-highlighting eza mole
+9. brew install --cask antigravity-cli codex brave-browser google-chrome
+10. brew install yazi zsh-syntax-highlighting eza
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
+
+to completely remove leftover files and folders of casks when uninstalling do this ->
+brew uninstall --cask --zap <cask-name>
 
 
 fetch('https://openrouter.ai/api/v1/chat/completions', {
   method: 'POST',
   headers: {
-    Authorization: 'Bearer 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',
+    Authorization: 'Bearer sk-or-v1-374b405fd2357c7c0381284ac7f45e185032c3f7addc41e1be2ce8bc.......',
     'HTTP-Referer': '<YOUR_SITE_URL>',
     'X-Title': '<YOUR_SITE_NAME>',
     'Content-Type': 'application/json',
@@ -51,7 +54,7 @@ fetch('https://openrouter.ai/api/v1/chat/completions', {
 
 curl https://openrouter.ai/api/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer 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" \
+  -H "Authorization: Bearer <token>" \
   -d '{
   "model": "openai/gpt-4o",
   "messages": [

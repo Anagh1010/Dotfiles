@@ -71,19 +71,19 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-"Developer" = "󰲋 "
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"projects" = "󰲋"
 
 [git_branch]
 symbol = " "
-style  = "fg:#7aa2f7"
+style  = "fg:blue"
 format = 'on [$symbol$branch]($style) '
 
 [git_status]
-style  = "fg:#f7768e"
+style  = "fg:red"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [line_break]
@@ -91,8 +91,8 @@ disabled = true
 #  ❯
 [character]
 disabled = false
-success_symbol = '[ ](fg:blue)'
-error_symbol = '[ ](fg:red)'
+success_symbol = '[](fg:blue)'
+error_symbol = '[](fg:red)'
 
 [cmd_duration]
 disabled = true
@@ -124,7 +124,7 @@ format = 'via [$symbol($version )]($style)'
 
 [java]
 symbol = " "
-style = "fg:maroon"
+style = "fg:blue"
 format = 'via [$symbol($version )]($style)'
 
 [python]
