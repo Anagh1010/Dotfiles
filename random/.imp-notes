@@ -20,10 +20,9 @@ brew installs on fresh mac:->
 4. brew install stow node neovim pyenv
 5. brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig (for pyenv[build dependencies])
 6. brew install fzf ripgrep fd lazygit fastfetch
-7. brew install --cask obsidian
-8. brew install --cask zed (since installed using brew, use brew upgrade zed to update instead of inbuilt update mechanism)
-9. brew install --cask antigravity-cli codex brave-browser google-chrome
-10. brew install yazi zsh-syntax-highlighting eza
+7. brew install --cask obsidian zed antigravity-cli codex brave-browser google-chrome
+8. brew install yazi zsh-syntax-highlighting eza
+9. brew install mole maven openjdk ollama
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
