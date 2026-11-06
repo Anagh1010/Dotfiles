@@ -1,5 +1,5 @@
 # Paths & Env
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship-catppuccin.toml
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 activate_pyenv() { eval "$(pyenv init - zsh)"; }

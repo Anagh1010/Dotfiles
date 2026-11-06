@@ -22,7 +22,7 @@ brew installs on fresh mac:->
 6. brew install fzf ripgrep fd lazygit fastfetch
 7. brew install --cask obsidian zed antigravity-cli codex brave-browser google-chrome
 8. brew install yazi zsh-syntax-highlighting eza
-9. brew install mole maven openjdk ollama
+9. brew install mole openjdk maven ollama
 
 if you want custom brew cask install location then do this ->
 --appdir=/Volumes/SN7100-500GB/Applications
