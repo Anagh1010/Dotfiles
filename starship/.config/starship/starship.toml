@@ -1,10 +1,14 @@
 add_newline = true
 command_timeout = 2000
-palette = "tokyonight"
+palette = "catppuccin_mocha"
 
-format = """$directory\
-$line_break$character"""
-right_format = "$git_branch$git_status$c$cpp$rust$nodejs$java$python$cmd_duration"
+# format = "$directory$line_break$character"
+# right_format = "$git_branch$git_status$c$cpp$rust$nodejs$java$python$cmd_duration"
+
+format = """$directory$fill$git_branch$git_status$c$cpp$rust$nodejs$java$python$cmd_duration$line_break$character"""
+
+[fill]
+symbol = " "
 
 # ── Palette ───────────────────────────────────────────────────────────────────
 [palettes.catppuccin_mocha]
@@ -65,10 +69,11 @@ crust     = "#101014"
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
 [directory]
-style             = "fg:#73dacb"
+style             = "fg:blue"
 format            = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+home_symbol = '󰋜 ~'
 
 [directory.substitutions]
 "Documents" = "󰈙"
@@ -79,42 +84,42 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
-style  = "fg:blue"
+style  = "fg:green"
 format = 'on [$symbol$branch]($style) '
 
 [git_status]
-style  = "fg:red"
+style  = "fg:green"
 format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [line_break]
-disabled = true
+disabled = false
 #  ❯
 [character]
 disabled = false
-success_symbol = '[](fg:blue)'
-error_symbol = '[](fg:red)'
+success_symbol = '[ ❯](fg:green)'
+error_symbol = '[ ❯](fg:red)'
 
 [cmd_duration]
-disabled = true
+disabled = false
 min_time          = 2000
 show_milliseconds = false
-style             = "fg:yellow"
+style             = "fg:green"
 format            = "[took ](fg:overlay1)[$duration]($style)"
 
 # ── Languages ─────────────────────────────────────────────────────────────────
 [c]
 symbol = " "
-style = "fg:sky"
+style = "fg:green"
 format = 'via [$symbol($version )]($style)'
 
 [cpp]
 symbol = " "
-style = "fg:sky"
+style = "fg:green"
 format = 'via [$symbol($version )]($style)'
 
 [rust]
 symbol = " "
-style = "fg:peach"
+style = "fg:green"
 format = 'via [$symbol($version )]($style)'
 
 [nodejs]
@@ -124,10 +129,10 @@ format = 'via [$symbol($version )]($style)'
 
 [java]
 symbol = " "
-style = "fg:blue"
+style = "fg:green"
 format = 'via [$symbol($version )]($style)'
 
 [python]
 symbol = " "
-style = "fg:yellow"
+style = "fg:green"
 format = 'via [$symbol($version )(\($virtualenv\) )]($style)'

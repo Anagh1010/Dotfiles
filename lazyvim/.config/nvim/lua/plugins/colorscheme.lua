@@ -1,41 +1,12 @@
 return {
-  -- Configure Catppuccin
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-
-    opts = {
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
-      transparent_background = false,
-
-      highlight_overrides = {
-        mocha = function(colors)
-          return {
-            -- Current line number (orange)
-            CursorLineNr = {
-              fg = colors.peach,
-              bold = true,
-            },
-          }
-        end,
-      },
-    },
-  },
-  -- Configure Tokyonight
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {
     "folke/tokyonight.nvim",
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     opts = {
       style = "night",
     },
   },
-
-  -- Tell LazyVim which theme to use
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "tokyonight",
-    },
-  },
+  { "LazyVim/LazyVim", opts = { colorscheme = "tokyonight" } },
 }

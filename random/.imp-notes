@@ -1,8 +1,5 @@
-$HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty --> ghostty config file location
 $HOME/.config/ghostty/themes/ --> add theme files here and then change theme in config file
 $HOME/.config/ghostty/config.ghostty --> config file location
-
-run antigravity-cli by running 'agy' in the terminal. In a project directory, antigravity-cli looks for a GEMINI.md file for initial instructions about the project(context)
 
 install a new version of python with pyenv install 3.12.12(example). to set global/local(for the directory) version of python type pyenv global/local 3.12.12. To unistall -> pyenv uninstall 3.12.12
 
@@ -29,55 +26,3 @@ if you want custom brew cask install location then do this ->
 
 to completely remove leftover files and folders of casks when uninstalling do this ->
 brew uninstall --cask --zap <cask-name>
-
-
-fetch('https://openrouter.ai/api/v1/chat/completions', {
-  method: 'POST',
-  headers: {
-    Authorization: 'Bearer <api key>',
-    'HTTP-Referer': '<YOUR_SITE_URL>',
-    'X-Title': '<YOUR_SITE_NAME>',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    model: 'openai/gpt-4o',
-    messages: [
-      {
-        role: 'user',
-        content: 'What is the meaning of life?',
-      },
-    ],
-  }),
-});
-
-
-curl https://openrouter.ai/api/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <api key>" \
-  -d '{
-  "model": "openai/gpt-4o",
-  "messages": [
-    {
-      "role": "user",
-      "content": "What is the meaning of life?"
-    }
-  ]
-}'
-
-
-# My Lines
-#model_provider = "openrouter"
-#model = "stealth/ox-alpha"
-#model_reasoning_effort = "high"
-
-#[model_providers.openrouter]
-#name = "OpenRouter"
-#base_url = "https://openrouter.ai/api/v1"
-#env_key = "OPENROUTER_API_KEY"
-#wire_api = "responses"
-
-
-approval_policy = "on-request"
-approvals_reviewer = "user"
-model = "gpt-5.6-terra"
-model_reasoning_effort = "medium"

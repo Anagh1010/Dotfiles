@@ -1,5 +1,5 @@
 # Paths & Env
-export STARSHIP_CONFIG=~/.config/starship/starship-catppuccin.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 activate_pyenv() { eval "$(pyenv init - zsh)"; }
@@ -23,7 +23,11 @@ setopt hist_find_no_dups
 alias c='clear'
 alias dotfiles-stow='(cd ~/dotfiles && find . -name ".DS_Store" -delete && stow --verbose --restow */)'
 alias cdp='cd ~/projects'
-alias ls='eza -l --header --icons --group-directories-first'
+alias ls='eza -lhF --icons=auto'
+alias update='brew update && brew upgrade && brew cleanup --prune=all && brew missing && brew doctor; echo "----System deep cleaned and updated----"'
+alias gs='git status'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
@@ -34,4 +38,4 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 eval "$(starship init zsh)"
 
 # Startup
-fastfetch
+#fastfetch

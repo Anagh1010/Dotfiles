@@ -30,7 +30,7 @@
             "type": "os"
         },
         {
-            "key": "│ {#35} kernel  {#keys}│",
+            "key": "│ {#32} kernel  {#keys}│",
             "type": "kernel"
         },
         {
@@ -57,7 +57,7 @@
             "format": "{1} / {2} ({3})"
         },
         {
-            "key": "│ {#35} memory  {#keys}│",
+            "key": "│ {#31} memory  {#keys}│",
             "type": "memory"
         },
         {
