@@ -28,6 +28,7 @@ alias update='brew update && brew upgrade && brew cleanup --prune=all && brew mi
 alias gs='git status'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
+alias gp='git push'
 bindkey '^ ' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
